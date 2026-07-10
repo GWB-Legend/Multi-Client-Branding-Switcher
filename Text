@@ -1,0 +1,17 @@
+***
+
+### Project Structure
+
+```text
+/src
+  /components
+    DashboardShell.jsx
+  /configs
+    clients.js
+  /styles
+    dashboard.css
+  App.jsx
+  main.jsx
+index.html
+package.json
+vite.config.js

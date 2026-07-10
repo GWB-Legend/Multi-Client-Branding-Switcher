@@ -1,0 +1,210 @@
+/* Accessibility: Screen reader only class */
+.sc-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Shell Layout */
+.sc-shell {
+  /* Fallbacks handled by inline JS variable injection */
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+/* Sidebar Theming (Uses CSS Variables) */
+.sc-sidebar {
+  width: 240px;
+  background-color: var(--sc-sidebar-bg);
+  color: var(--sc-sidebar-text);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.sc-sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sc-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+}
+
+.sc-org-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.2;
+}
+
+.sc-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.sc-nav-link {
+  display: block;
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.9rem;
+  transition: background-color 0.15s ease;
+}
+
+.sc-nav-link:hover,
+.sc-nav-link:focus-visible {
+  background-color: rgba(255, 255, 255, 0.1);
+  outline: none;
+}
+
+.sc-nav-link--active {
+  background-color: var(--sc-primary);
+  color: var(--sc-primary-foreground);
+  font-weight: 500;
+}
+
+/* Main Layout */
+.sc-main-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.sc-topbar {
+  height: 64px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+}
+
+.sc-search-input {
+  width: 300px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.875rem;
+}
+
+.sc-search-input:focus {
+  border-color: var(--sc-primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--sc-primary) 20%, transparent);
+  outline: none;
+}
+
+.sc-user-chip {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+/* Content Area */
+.sc-content {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.sc-welcome-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  color: #0f172a;
+}
+
+/* Metrics Grid */
+.sc-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.sc-metric-card {
+  background-color: #ffffff;
+  padding: 1.25rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  border-top: 4px solid var(--sc-primary); /* Theme application without inline styles */
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.sc-metric-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--sc-primary);
+}
+
+.sc-metric-label {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Activity Section */
+.sc-section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: #334155;
+}
+
+.sc-activity-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sc-activity-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: #475569;
+  background: #ffffff;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.sc-activity-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--sc-primary);
+  margin-top: 6px;
+  flex-shrink: 0;
+}

@@ -1,0 +1,15 @@
+---
+
+### File Structure
+```text
+src/
+├── App.jsx
+├── main.jsx
+├── configs/
+│   └── ClientConfigs.js       # Mock client payloads
+├── contexts/
+│   └── ThemeProvider.jsx      # CSS variable injector
+├── components/
+│   └── DashboardShell.jsx     # Agnostic UI shell
+└── styles/
+    └── dashboard.css          # Variable-driven styles

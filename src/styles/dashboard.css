@@ -1,0 +1,172 @@
+/* Scoped root defaults */
+.theme-provider-root {
+  --color-primary: #000;
+  --color-primary-hover: #333;
+  --color-surface: #fff;
+  --color-text-primary: #000;
+  --color-text-secondary: #666;
+  --color-border: #ccc;
+  --font-family: sans-serif;
+  
+  color: var(--color-text-primary);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.shell-header {
+  background-color: var(--color-surface);
+  border-bottom: 2px solid var(--color-primary);
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shell-branding {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.shell-logo {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+}
+
+.shell-org-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--color-text-primary);
+}
+
+.shell-nav-btn {
+  background: transparent;
+  border: none;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.shell-nav-btn:hover,
+.shell-nav-btn:focus-visible {
+  color: var(--color-primary);
+  background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
+  outline: none;
+}
+
+.shell-main {
+  padding: 24px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.shell-title {
+  font-size: 20px;
+  margin: 0 0 16px 0;
+  color: var(--color-text-primary);
+}
+
+.shell-search-wrapper {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.shell-search-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 14px;
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+}
+
+.shell-search-input:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+  border-color: transparent;
+}
+
+.shell-search-btn {
+  padding: 10px 20px;
+  background-color: var(--color-primary);
+  color: white; /* White text works on both Teal and Deep Blue */
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.shell-search-btn:hover,
+.shell-search-btn:focus-visible {
+  background-color: var(--color-primary-hover);
+  outline: none;
+}
+
+.shell-card {
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 12px;
+  background: var(--color-surface);
+}
+
+.shell-card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.shell-badge {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-primary);
+}
+
+.shell-relevance {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.shell-card-title {
+  margin: 0 0 12px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.shell-card-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.shell-text-btn {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.shell-text-btn:hover,
+.shell-text-btn:focus-visible {
+  text-decoration: underline;
+  outline: none;
+}
